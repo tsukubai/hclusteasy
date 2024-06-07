@@ -1,0 +1,27 @@
+Package: hclusteasy
+Title: Determining Hierarchical Clustering Easily
+Version: 0.0.0.9000
+Authors@R: c(
+    person("André", "Nogueira", , "andreln27@yahoo.com", role = "aut"),
+    person("Henrique", "Andrade", , "henrique.4ndrade@outlook.com", role = c("aut", "cre"))
+  )
+Description: Facilitating Hierarchical Clustering Analysis with functions
+    for reading data in 'txt', 'xlsx', and 'xls' formats, applying
+    normalization techniques to the dataset, using hierarchical clustering
+    methods, and constructing scatter plots from principal component
+    analysis to evaluate the groups obtained by hierarchical methods.
+License: GPL-2
+Depends: 
+    R (>= 3.6)
+Imports: 
+    clusterSim,
+    factoextra,
+    readxl,
+    stats,
+    utils
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.1
