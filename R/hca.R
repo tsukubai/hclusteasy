@@ -22,10 +22,10 @@
 #'
 #'
 #' # Read iris dataset from packege
-#' data("iris")
+#' data("iris_uci")
 #'
 #' # Remove column "Species" from the iris dataset
-#' iris <- iris[, -5]
+#' iris <- iris_uci[, -5]
 #'
 #'
 #' # Apply hierarchical cluster analysis and selecting groups.

@@ -1,6 +1,6 @@
 Package: hclusteasy
 Title: Determining Hierarchical Clustering Easily
-Version: 0.0.0.9000
+Version: 0.1.0
 Authors@R: c(
     person("André", "Nogueira", , "andreln27@yahoo.com", role = "aut"),
     person("Henrique", "Andrade", , "henrique.4ndrade@outlook.com", role = c("aut", "cre"))

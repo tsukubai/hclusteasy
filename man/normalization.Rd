@@ -51,10 +51,10 @@ library(hclusteasy)
 
 
 # Read dataset iris from packege
-data("iris")
+data("iris_uci")
 
 # Remove column Species from the iris dataset
-iris <- iris[, -5]
+iris <- iris_uci[, -5]
 
 
 # Apply normalization in dataset iris

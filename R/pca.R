@@ -19,13 +19,13 @@
 #'
 #'
 #' # Read iris dataset from packege
-#' data("iris")
+#' data("iris_uci")
 #'
 #' # Select column "Species" (groups) from the iris dataset
-#' species <- iris[, 5]
+#' species <- iris_uci[, 5]
 #'
 #' # Remove column "Species" from the iris dataset
-#' iris <- iris[, -5]
+#' iris <- iris_uci[, -5]
 #'
 #'
 #' # Apply pca and ploting the two firsts components in pca, without groups

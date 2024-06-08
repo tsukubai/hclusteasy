@@ -25,12 +25,12 @@
 #'
 #' # Set the file path
 #' file_path <- system.file("extdata",
-#'                           "iris.xlsx",
+#'                           "iris_uci.xlsx",
 #'                            package = "hclusteasy")
 #'
 #'
 #' # Read a XLSX dataset
-#' data <- read.data(file_path,col.names = TRUE)
+#' iris <- read.data(file_path,col.names = TRUE)
 #'
 #' @importFrom readxl read_xlsx read_xls
 #' @importFrom utils read.table

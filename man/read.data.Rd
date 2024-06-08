@@ -31,11 +31,11 @@ library(hclusteasy)
 
 # Set the file path
 file_path <- system.file("extdata",
-                          "iris.xlsx",
+                          "iris_uci.xlsx",
                            package = "hclusteasy")
 
 
 # Read a XLSX dataset
-data <- read.data(file_path,col.names = TRUE)
+iris <- read.data(file_path,col.names = TRUE)
 
 }
