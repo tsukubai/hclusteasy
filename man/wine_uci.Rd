@@ -8,6 +8,6 @@
 \usage{data("wine_uci")}
 \source{\url{https://archive.ics.uci.edu}}
 \references{
-  Aeberhard, Stefan and Forina, M. (1991). Wine. UCI Machine Learning Repository. \url{https://doi.org/10.24432/C5PC7J}.
+  Aeberhard, Stefan and Forina, M. (1991). Wine. UCI Machine Learning Repository. \url{doi.org/10.24432/C5PC7J}.
 }
 \keyword{datasets}
