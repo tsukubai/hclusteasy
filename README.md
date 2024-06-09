@@ -9,6 +9,7 @@
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/hclusteasy)](https://CRAN.R-project.org/package=hclusteasy)
+[![R-CMD-check](https://github.com/tsukubai/hclusteasy/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/tsukubai/hclusteasy/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 ## Overview
@@ -99,7 +100,7 @@ iris[1:3,]
 #> 3          4.7         3.2          1.3         0.2  setosa
 ```
 
-Nomarlization
+Normalization
 
 ``` r
 # removing groups
