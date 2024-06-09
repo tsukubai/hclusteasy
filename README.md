@@ -35,6 +35,14 @@ components using stats and factoextra.
   [CRAN](https://cran.r-project.org/package=factoextra) and
   [GitHub](https://github.com/kassambara/factoextra/tree/master)
 
+## Table of Contents
+
+- [Installation](#Installation)
+- [Introduction](#Introduction)
+  - [Datasets](#Datasets)
+  - [Functions](#Functions)
+- [Usage](#Usage)
+
 ## Installation
 
 You can install hclusteasy from GitHub using the `devtools` package.:
