@@ -1,7 +1,4 @@
-# hclusteasy (development version)
-
-
-# hclusteasy 0.1.0
+# hclusteasy 0.0.1
 
 This release introduces new functionalities aimed at simplifying hierarchical clustering analysis in R. With `hclusteasy` version 0.2.0, users can seamlessly import data from various formats, apply data normalization techniques, perform hierarchical clustering analysis, and visualize results through principal component analysis (PCA).
 
