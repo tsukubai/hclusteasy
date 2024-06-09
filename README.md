@@ -11,6 +11,8 @@ experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](h
 status](https://www.r-pkg.org/badges/version/hclusteasy)](https://CRAN.R-project.org/package=hclusteasy)
 <!-- badges: end -->
 
+## Overview
+
 The hclusteasy package aims to simplify hierarchical clustering analysis
 by integrating essential functions from renowned R packages. It enables
 reading data in txt, xlsx, and xls formats using utils and readxl,

@@ -20,6 +20,8 @@ knitr::opts_chunk$set(
 [![CRAN status](https://www.r-pkg.org/badges/version/hclusteasy)](https://CRAN.R-project.org/package=hclusteasy)
 <!-- badges: end -->
 
+## Overview
+
 The hclusteasy package aims to simplify hierarchical clustering analysis by integrating essential functions from renowned R packages. It enables reading data in txt, xlsx, and xls formats using utils and readxl, offers advanced data normalization techniques from the clusterSim package, performs hierarchical clustering (HCA) with the stats package, and conducts principal component analysis (PCA), plotting the first two components using stats and factoextra.
 
 ### Documentation References
