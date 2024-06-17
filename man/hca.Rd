@@ -2,41 +2,40 @@
 % Please edit documentation in R/hca.R
 \name{hca}
 \alias{hca}
-\title{Generate and select groups with hierarchical clustering}
+\title{Generate and Select Groups with Hierarchical Clustering}
 \usage{
 hca(data, method = "complete", num.groups = 3)
 }
 \arguments{
 \item{data}{Dataset in \code{data.frame} format.}
 
-\item{method}{Method of agglomeration to be used: "ward.D", "ward.D2",
+\item{method}{Method of hierarchical clustering, considering: "ward.D", "ward.D2",
 "single", "complete", "average" (UPGMA), "mcquitty" (WPGMA),
-"median" (WPGMC), or "centroid" (UPGMC). Default is "complete".}
+"median" (WPGMC) or "centroid" (UPGMC). Default is "complete".}
 
-\item{num.groups}{Number of groups to cutree. Default is 3.}
+\item{num.groups}{Number of groups to cut. Default is three.}
 }
 \value{
-a vector of integers, where each element represents the group
-indicated for each observation in the original dataset.
+A vector of integers, where each element represents the group
+assigned to each observation in the original dataset.
 }
 \description{
-Perform hierarchical clustering to generate group
-based on sample dissimilarity by euclidean method.
+Perform hierarchical clustering and generate groups based on
+sample dissimilarity using the Euclidean method.
 }
 \examples{
-
-# Load the packages
+# Load the required package
 library(hclusteasy)
 
 
-# Read iris dataset from packege
+# Read the 'iris' dataset from the package
 data("iris_uci")
 
-# Remove column "Species" from the iris dataset
+# Remove column 'Species' from the iris dataset
 iris <- iris_uci[, -5]
 
 
-# Apply hierarchical cluster analysis and selecting groups.
+# Apply hierarchical cluster and selecting groups
 g <- hca(iris)
 
 }

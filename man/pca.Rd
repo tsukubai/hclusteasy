@@ -2,44 +2,43 @@
 % Please edit documentation in R/pca.R
 \name{pca}
 \alias{pca}
-\title{Plot the Principal Component Analysis}
+\title{Plot Principal Component Analysis Results}
 \usage{
 pca(data, groups = "none")
 }
 \arguments{
 \item{data}{Dataset in \code{data.frame} format.}
 
-\item{groups}{This parameter allows coloring of observations according
-to their group and drawing ellipses around each group with a confidence
-level of 0.98. The default is 'none'.}
+\item{groups}{Groups to color observations and draw ellipses around each
+group of samples with a confidence level of 0.98. Default is "none".}
 }
 \value{
 A \code{ggplot}.
 }
 \description{
-Apply PCA (Principal Component Analysis) to the data and plot a scatterplot of
-the first two principal components.
+Apply PCA (Principal Component Analysis) to the data and
+construct a scatter plot of the first two principal components.
 }
 \examples{
 
-# Load the packages
+# Load the required package
 library(hclusteasy)
 
 
-# Read iris dataset from packege
+# Read the 'iris' dataset from the package
 data("iris_uci")
 
-# Select column "Species" (groups) from the iris dataset
+# Select column "Species" (groups) in the iris dataset
 species <- iris_uci[, 5]
 
-# Remove column "Species" from the iris dataset
+# Remove column "Species" in the iris dataset
 iris <- iris_uci[, -5]
 
 
-# Apply pca and ploting the two firsts components in pca, without groups
+# Apply pca and ploting the two firsts components without groups
 pca(iris)
 
-# Apply pca and ploting the first two components in pca, with groups
+# Apply pca and ploting the first two components with groups
 pca(iris, groups = species)
 
 }

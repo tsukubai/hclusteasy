@@ -2,14 +2,14 @@
 % Please edit documentation in R/normalization.R
 \name{normalization}
 \alias{normalization}
-\title{Apply normalization techniques to the dataset}
+\title{Apply Normalization Techniques to the Dataset}
 \usage{
 normalization(data, type = "n0", norm = "column", na.remove = FALSE)
 }
 \arguments{
 \item{data}{Dataset in \code{data.frame} format.}
 
-\item{type}{Type of normalization:
+\item{type}{Type of normalization. Default is "n1".
 \itemize{
 \item n0: without normalization
 \item n1: standardization ((x-mean)/sd)
@@ -32,32 +32,31 @@ normalization(data, type = "n0", norm = "column", na.remove = FALSE)
 \item n13: normalization with zero being the central point ((x-midrange)/(range/2))
 }}
 
-\item{norm}{Defines whether the normalization will be done
-by "column" or by "row". The default is "column".}
+\item{norm}{Defines whether the normalization will be done by "column" or
+by "row". Default is "column".}
 
-\item{na.remove}{\code{Logical} value. If \code{TRUE}, does not consider \code{NA} values
-when performing normalization calculations. The default is \code{FALSE}.}
+\item{na.remove}{A \code{logical} value indicating whether NA values should be
+excluded before performing normalization calculations. Default is FALSE.}
 }
 \value{
-Normalized dataset.
+Normalized dataset in \code{data.frame} foramt.
 }
 \description{
-Transform the dataset by applying normalization techniques.
+Perform data normalization.
 }
 \examples{
-
-# Load the packages
+# Load the required package
 library(hclusteasy)
 
 
-# Read dataset iris from packege
+# Read the dataset 'iris' from the package
 data("iris_uci")
 
-# Remove column Species from the iris dataset
+# Remove the column 'Species' from the iris dataset
 iris <- iris_uci[, -5]
 
 
-# Apply normalization in dataset iris
+# Apply normalization to the iris dataset
 irisN <- normalization(iris, type = "n1")
 
 }

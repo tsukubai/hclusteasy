@@ -14,15 +14,19 @@ status](https://www.r-pkg.org/badges/version/hclusteasy)](https://CRAN.R-project
 
 ## Overview
 
-The hclusteasy package aims to simplify hierarchical clustering analysis
+The hclusteasy package simplifies HCA (Hierarchical Clustering Analysis)
 by integrating essential functions from renowned R packages. It enables
-reading data in txt, xlsx, and xls formats using utils and readxl,
-offers advanced data normalization techniques from the clusterSim
-package, performs hierarchical clustering (HCA) with the stats package,
-and conducts principal component analysis (PCA), plotting the first two
-components using stats and factoextra.
+data reading in `.txt`, `.xlsx` and `.xls` formats using `utils` and
+`readxl`, offers data normalization techniques from the `clusterSim`,
+performs hierarchical clustering analysis with the `stats` and conducts
+PCA (Principal Component Analysis), plotting the first two components
+using the `stats` and `factoextra` packages.
 
-### Documentation References
+### Packages Used in hclusteasy
+
+For more information about the packages used in the development of
+hclusteasy, please visit their documentation on CRAN or their
+repositories on GitHub.
 
 - **utils**: Documentation available in RStudio with `?utils`
 - **readxl**: Documentation on
@@ -45,7 +49,7 @@ components using stats and factoextra.
 
 ## Installation
 
-You can install hclusteasy from GitHub using the `devtools` package.:
+You can install hclusteasy from GitHub using the `devtools` package:
 
 ``` r
 # Install devtools if you haven't already
@@ -53,17 +57,17 @@ if (!requireNamespace("devtools", quietly = TRUE)) {
   install.packages("devtools")
 }
 
-# Install the package directly from GitHub
+# Install the hclusteasy package directly from GitHub
 devtools::install_github("tsukubai/hclusteasy")
 ```
 
 ## Introduction
 
 hclusteasy is designed to streamline the process of hierarchical
-clustering analysis by integrating several useful functions from popular
-R packages. The main goal of this package is to provide an easy-to-use
-interface for reading data, normalizing it, performing hierarchical
-clustering, and visualizing the results through PCA.
+clustering analysis by integrating essential functions from popular R
+packages. The main goal of this package is to provide an easy-to-use
+interface for reading data, performing data normalization, conducting
+hierarchical clustering, and visualizing results through PCA.
 
 ### Datasets
 
@@ -74,30 +78,30 @@ clustering, and visualizing the results through PCA.
 
 ### Functions
 
-| Functions       | Description                                                                                                          |
-|-----------------|----------------------------------------------------------------------------------------------------------------------|
-| *read.data*     | Read data from different formats (txt, xlsx, xls) for analysis.                                                      |
-| *normalization* | Applies data normalization techniques.                                                                               |
-| *hca*           | Performs hierarchical clustering analysis on the data, using Euclidean distance, and returns the generated clusters. |
-| *pca*           | Performs principal component analysis (PCA) and plots the first two principal components.                            |
+| Functions       | Description                                                                                                      |
+|-----------------|------------------------------------------------------------------------------------------------------------------|
+| *read.data*     | Reads data from different formats (txt, xlsx, xls) for analysis.                                                 |
+| *normalization* | Applies data normalization techniques.                                                                           |
+| *hca*           | Performs hierarchical clustering analysis on the data using Euclidean distance and returns the generated groups. |
+| *pca*           | Performs principal component analysis and generates a scatter plot from the first two principal components.      |
 
 ## Usage
 
 ``` r
-# library
+# Library
 library(hclusteasy)
 ```
 
 Read iris dataset in xlsx format
 
 ``` r
-# file path
+# File path: 'iris_uci.xlsx'
 file_path <- system.file("extdata",
                          "iris_uci.xlsx",
                          package = "hclusteasy")
 
 
-# read iris
+# Read iris in xlsx format
 iris <- read.data(file_path, col.names = TRUE)
 
 
@@ -108,13 +112,13 @@ iris[1:3,]
 #> 3          4.7         3.2          1.3         0.2  setosa
 ```
 
-Normalization
+Data normalization
 
 ``` r
-# removing groups
-iris <- iris[,1:4]
+# Remove "Species" column
+iris <- iris[,-5]
 
-# normalize for z-score by column
+# Data normalization using Z-score type, by column
 irisN <- normalization(iris, type = "n1", norm = "column")
 
 irisN[1:3,]
@@ -127,7 +131,8 @@ irisN[1:3,]
 Generate hierarchical groups
 
 ``` r
-# groups
+# Perform hierarchical clustering analysis
+# and return hierarchical groups
 g <- hca(irisN, method = "complete", num.groups = 3)
 
 g[1:10]
@@ -135,10 +140,11 @@ g[1:10]
 #>  1  1  1  1  1  1  1  1  1  1
 ```
 
-Plot PCA (Principal Component Analysis)
+Plot principal component analysis
 
 ``` r
+# Plot PCA considering the generated hierarchical groups
 pca(irisN, groups = g)
 ```
 
-<img src="man/figures/README-unnamed-chunk-7-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-7-1.png" width="80%" />

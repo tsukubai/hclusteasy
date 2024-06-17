@@ -2,28 +2,29 @@
 % Please edit documentation in R/read.data.R
 \name{read.data}
 \alias{read.data}
-\title{Read Dataset in txt, xlsx, or xls Format}
+\title{Read Files in txt, xls, or xlsx Formats}
 \usage{
 read.data(path, col.names = FALSE, col.types = NULL)
 }
 \arguments{
-\item{path}{The path to the folder where the dataset is located.}
+\item{path}{Path to the \code{txt}(space-separated), \code{xls} or \code{xlsx} file.}
 
-\item{col.names}{\code{Logical} value indicating whether the first row
-of the dataset should be used as column names. Default is \code{FALSE}.}
+\item{col.names}{Logical value indicating whether the first row
+of the dataset should be used as column names. Use \code{TRUE} to use the first
+row as column names or \code{FALSE} otherwise. Default is \code{FALSE}.}
 
-\item{col.types}{Character or a character vector specifying
-the data types for each column: "skip", "guess", "logical", "numeric",
-"date", "text", or "list". By default, it is \code{NULL}, which means the
-data types will be determined automatically. Note that \code{txt} files do not
-support parameter \code{col.types}.}
+\item{col.types}{Character or a character vector specifying the data types
+for each column. Possible values are: "skip" , "guess" , "logical" ,
+"numeric", "date" , "text" , or "list" .  Default, it is \code{NULL}, which
+means the data types will be determined automatically ("guess").  Note that \code{txt}
+files do not support the \code{col.types} parameter.}
 }
 \value{
-A dataset in \code{data.frame} format.
+Dataset in \code{data.frame} format.
 }
 \description{
-Read a dataset from a specified file path in
-\code{txt}(separated by space), \code{xlsx}, or \code{xls} format and return a \code{data.frame}.
+Read datasets files in \code{txt}(space-separated), \code{xls} or \code{xlsx}
+and return the data as a \code{data.frame}.
 }
 \examples{
 # Load the package
@@ -35,7 +36,7 @@ file_path <- system.file("extdata",
                            package = "hclusteasy")
 
 
-# Read a XLSX dataset
+# Read a .xlsx dataset
 iris <- read.data(file_path,col.names = TRUE)
 
 }

@@ -1,7 +1,7 @@
 \name{iris_uci}
 \alias{iris_uci}
 \docType{data}
-\title{iris dataset}
+\title{Iris Dataset}
 \description{
   The iris dataset consists of 150 observations of five variables, describing the length and width of sepals and petals for three iris species.
 }
