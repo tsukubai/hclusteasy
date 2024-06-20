@@ -8,7 +8,7 @@ Authors@R: c(
 Description: Facilitates hierarchical clustering analysis with functions
     to read data in 'txt', 'xlsx', and 'xls' formats, apply normalization
     techniques to the dataset, perform hierarchical clustering and
-    construct scatter plots from principal component analysis to evaluate
+    construct scatter plot from principal component analysis to evaluate
     the groups obtained.
 License: GPL-2
 URL: https://github.com/tsukubai/hclusteasy
