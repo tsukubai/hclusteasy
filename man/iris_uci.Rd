@@ -8,6 +8,6 @@
 \usage{data("iris_uci")}
 \source{\url{https://archive.ics.uci.edu}}
 \references{
-  Fisher, R. A. (1988). Iris. UCI Machine Learning Repository. \url{https://doi.org/10.24432/C56C76}.
+  Fisher, R. A. (1988). Iris. UCI Machine Learning Repository. \doi{10.24432/C56C76}.
 }
 \keyword{datasets}
